@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523813956625",
+    "project_id": "calenderapitest-5cc08",
+    "storage_bucket": "calenderapitest-5cc08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523813956625:android:3d8af3d8381bd4f99a95b0",
+        "android_client_info": {
+          "package_name": "com.hbtu.calenderapitest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523813956625-s420r062b821u2g5mcv9glgijtselr7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Q-mMz-vu0eCBJYCl2kbTrR42lDDwfOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523813956625-s420r062b821u2g5mcv9glgijtselr7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
