@@ -28,8 +28,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String CLIENT_ID = "523813956625-41374d211ku3v1c2dcdmlr3cplph2j5a.apps.googleusercontent.com";
-    private static final String CLIENT_SECRET = "AIzaSyA4Q-mMz-vu0eCBJYCl2kbTrR42lDDwfOk";
+    private static final String CLIENT_ID = "523813956625-s420r062b821u2g5mcv9glgijtselr7f.apps.googleusercontent.com";
+    private static final String CLIENT_SECRET = "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";
 
     Button btnHasEvents;
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     // Set the time range to the current time only.
                     Events events = service.events().list("primary")
                             .setTimeMin(now)
-                            .setTimeMax(twentyMinutesLater)
+//                            .setTimeMax(twentyMinutesLater)
                             .setOrderBy("startTime")
                             .setSingleEvents(true)
                             .execute();
