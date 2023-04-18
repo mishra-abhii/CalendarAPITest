@@ -87,7 +87,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements GoogleApi
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
-                updateUI(null, null);
+                updateUI(null);
             }
         }
     }
@@ -102,19 +102,19 @@ public class GoogleSignInActivity extends AppCompatActivity implements GoogleApi
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user, account);
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(GoogleSignInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null, null);
+                            updateUI(null);
                         }
                     }
                 });
     }
 
-    private void updateUI(FirebaseUser user, GoogleSignInAccount account) {
+    private void updateUI(FirebaseUser user) {
         if (user != null) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

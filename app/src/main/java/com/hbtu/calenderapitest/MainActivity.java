@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // Fetch the user's calendar events
                     DateTime now = new DateTime(System.currentTimeMillis());
-                    DateTime twentyMinutesLater = new DateTime(System.currentTimeMillis() + (20*60*1000));
+//                    DateTime twentyMinutesLater = new DateTime(System.currentTimeMillis() + (20*60*1000));
                     // Set the time range to the current time only.
                     Events events = service.events().list("primary")
                             .setTimeMin(now)
@@ -83,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
                             .setOrderBy("startTime")
                             .setSingleEvents(true)
                             .execute();
-                    List<Event> items = events.getItems();
-                    return items;
+                    return events.getItems();
                 }
                 catch (Exception e) {
                     Log.e("tag", "Error fetching calendar events: " + e.getMessage());
